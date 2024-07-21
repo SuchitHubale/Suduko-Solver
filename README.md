@@ -19,10 +19,13 @@ Sudoku is a logic-based puzzle that is played by numbers from 1 to 9. The Puzzle
 # Examined Algorithms
 # Pencil-and-paper algorithm 
 In this work, we implement a solution based on some strategies used by humans when solving the puzzle, therefore, it is called pencil-and-paper algorithm. The paper-and-pencil algorithm contains human strategies. These strategies have been examined below in more details. These techniques are almost easy to understand by human players, but it might be hard to search in the puzzle, since there are several things to look for at the same time. As there are puzzles with different types of difficulty, the easy and medium puzzles can be solved using some simple techniques such as unique missing method, naked singles. However, to solve difficult problems we may examine other techniques as well (locked candidates, naked and hidden pairs, triplets etc.)
+
 ![alt text](image.png)
 
 # Backtracking (guessing method)
 In order to solve puzzles with even more difficult levels such as hard and evil the backtracking method has been used to complete the algorithm. A human player solves the puzzle by using simple techniques. If the puzzle is not solvable by using the techniques the player, then tries to fill the rest of the empty squares by guessing.
 
 The backtracking method, which is similar to the human strategy (guessing), is used as a help method to the pencil-and-paper algorithm. In other words, if the puzzle cannot be filled when using the unique missing method and the naked single method, the backtracking method will take the puzzle and fill the rest of empty squares. Generally, the backtracking method find empty square and assign the lowest valid number in the square once the content of other squares in the same row, column and box are considered. However, if none of the numbers from 1 to 9 are valid in a certain square, the algorithm backtracks to the previous square, which was filled recently.
+
+
 ![alt text](image-1.png)
