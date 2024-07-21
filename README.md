@@ -1,5 +1,4 @@
 # Sudoku-Solver
-This is a Project to solve the sudoku game using the concept of Backtracking Algorithm.
 
 # Abbreviations and Definitions:  
 In this essay we have tried to use the same    terminology, which is commonly used in other journals and research papers. In the following paragraph, there is a brief description of some the abbreviations and definitions that are used in the text.
