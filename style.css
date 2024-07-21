@@ -1,24 +1,22 @@
-*, *::after,*::before{
+*, *::after, *::before {
   padding: 0;
   margin: 0;
 }
-.Header{
-  display: flex;
-  justify-content: space-between; 
-  width: 100%;
-  margin-bottom: 20px;
-  background-color: #4567b7; /* dark blue */
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
 
-body{
+body {
   background-color: whitesmoke; /* light gray */
 }
 
-#name{
+.Header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: #4567b7; /* dark blue */
+  border-radius: 10px;
+}
+
+#name {
   width: 100%;
   display: flex;
   align-items: center;
@@ -28,7 +26,7 @@ body{
   color: #fff; /* white */
 }
 
-.Heading{
+.Heading {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -36,20 +34,17 @@ body{
   font-size: 40px;
   font-weight: bold;
   color: black; /* dark gray */
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 .sudoku_grid {
   display: grid;
-  grid-template-columns: repeat(9, 60px);
-  grid-gap: 1px;
-  max-width: 548px; /* Adjusted to fit 9 columns of 60px each */
+  grid-template-columns: repeat(9, 1fr);
+  gap: 1px;
+  max-width: 540px;
   margin: 10px auto;
-  justify-content: center;
-  background-color: #fff;
-  border: 1.5px solid black;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
   background-color: black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
 
 .sudoku_grid div {
@@ -63,7 +58,6 @@ body{
   transition: background-color 0.3s ease;
   height: 60px;
 }
-
 /* Color each 3x3 block differently */
 .sudoku_grid div:nth-child(1),
 .sudoku_grid div:nth-child(2),
@@ -178,79 +172,54 @@ body{
   /* border: 2px solid black; */
 }
 
-/* Media query for smaller screens */
-@media only screen and (max-width: 768px) {
-  .sudoku_grid {
-      max-width: 90%; /* adjust the max-width to fit smaller screens */
-  }
-  .sudoku_grid div {
-      height: 40px; /* adjust the height to fit smaller screens */
-  }
+.box1 {
+  background-color: #8bc34a; /* light green */
+  border: 2px solid black;
 }
 
-/* Media query for even smaller screens */
-@media only screen and (max-width: 480px) {
-  .sudoku_grid {
-      max-width: 80%; /* adjust the max-width to fit even smaller screens */
-  }
-  .sudoku_grid div {
-      height: 30px; /* adjust the height to fit even smaller screens */
-  }
+.box1:hover {
+  background-color: #34c759; /* darker green */
+  color: black;
 }
 
- .box1{
-    background-color: #8bc34a; /* light green */
-    border: 2px solid rgb(0, 0, 0);
+.box2 {
+  background-color: #f7dc6f;
+  border: 2px solid black;
 }
 
-.box1:hover{
-    background-color: #34c759; /* darker green */
-    color: black;
+.box2:hover {
+  background-color: #ffd700;
 }
 
-.box2{
-    background-color: #f7dc6f; 
-    border: 2px solid rgb(0, 0, 0);
+.box3 {
+  background-color: #66d9ef;
+  border: 2px solid black;
 }
 
-.box2:hover{
-    background-color: #ffd700; 
-}
-
-.box3{
-    background-color: #66d9ef; 
-    border: 2px solid rgb(0, 0, 0);
-}
-
-.box3:hover{
-    background-color: #3498db;
-    color: black;
-} 
-
-.bt{
-    border-top: 4px solid black;
+.box3:hover {
+  background-color: #3498db;
+  color: black;
 }
 
 .Buttons {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 40px;
 }
 
 button {
-    transition: all .5s ease;
-    color: #fff;
-    border: 3px solid white;
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
-    text-align: center;
-    line-height: 1;
-    font-size: 17px;
-    background-color: transparent;
-    padding: 10px;
-    outline: none;
-    border-radius: 4px;
+  transition: all 0.5s ease;
+  color: #fff;
+  border: 3px solid white;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 17px;
+  background-color: transparent;
+  padding: 10px;
+  outline: none;
+  border-radius: 4px;
 }
 
 button:hover {
@@ -258,24 +227,23 @@ button:hover {
   background-color: #fff;
 }
 
-#GetPuzzle,#SolvePuzzle{
-    display: inline-block;
-    text-decoration: none;
-    color: #fff; /* white */
-    font-weight: bold;
-    background-color: #3498db; /* blue */
-    padding: 10px 35px;
-    font-size: 24px;
-    border: 1px solid #03f699; /* green border */
-    box-shadow: inset 0px 1px 0px #ef0b0b; /* red glow */
-    margin-right: 10px;
+#GetPuzzle, #SolvePuzzle {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff; /* white */
+  font-weight: bold;
+  background-color: #3498db; /* blue */
+  padding: 10px 35px;
+  font-size: 24px;
+  border: 1px solid #03f699; /* green border */
+  box-shadow: inset 0px 1px 0px #ef0b0b; /* red glow */
+  margin-right: 10px;
 }
 
-#GetPuzzle:hover,#SolvePuzzle:hover{
-    background-color: #2980b9; /* darker blue */
-    color: #333;
+#GetPuzzle:hover, #SolvePuzzle:hover {
+  background-color: #2980b9; /* darker blue */
+  color: #333;
 }
-/* Social Media Icons */
 
 .fa-instagram {
   color: #e1306c; /* Instagram color */
@@ -288,58 +256,116 @@ button:hover {
 .fa-linkedin {
   color: #0072b1; /* LinkedIn color */
 }
-.fa-facebook{
-  color: #0072b1;
+
+.fa-facebook {
+  color: #0072b1; /* Facebook color */
 }
+
 .footer {
   background-color: #333; /* dark gray background */
   color: #fff; /* white text color */
   padding: 20px;
 }
-  
+
 .footer .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.footer .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer .col-md-4 {
+  margin-bottom: 20px;
+}
+
+.footer h4 {
+  margin-top: 0;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer li {
+  margin-bottom: 10px;
+}
+
+.footer a {
+  color: #fff; /* white text color */
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #ccc; /* light gray text color */
+}
+
+.footer .copyright {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.col-md-4 h3 {
+  margin-bottom: 10px;
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+  #name {
+    font-size: 60px;
   }
-  
-  .footer .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+
+  .Heading {
+    font-size: 30px;
   }
-  
-  .footer .col-md-4 {
-    margin-bottom: 20px;
+
+  .sudoku_grid {
+    max-width: 90%;
   }
-  
-  .footer h4 {
-    margin-top: 0;
+
+  .sudoku_grid div {
+    height: 40px;
+    font-size: 24px;
   }
-  
-  .footer ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+
+  #GetPuzzle, #SolvePuzzle {
+    padding: 8px 30px;
+    font-size: 20px;
   }
-  
-  .footer li {
-    margin-bottom: 10px;
+}
+
+/* Media query for even smaller screens */
+@media only screen and (max-width: 480px) {
+  #name {
+    font-size: 40px;
   }
-  
-  .footer a {
-    color: #fff; /* white text color */
-    text-decoration: none;
+
+  .Heading {
+    font-size: 24px;
   }
-  
-  .footer a:hover {
-    color: #ccc; /* light gray text color */
+
+  .sudoku_grid {
+    max-width: 80%;
   }
-  
-  .footer .copyright {
-    text-align: center;
-    margin-top: 20px;
+
+  .sudoku_grid div {
+    height: 30px;
+    font-size: 18px;
   }
-  .col-md-4 h3{
-    margin-bottom: 10px;
+
+  #GetPuzzle, #SolvePuzzle {
+    padding: 6px 25px;
+    font-size: 18px;
   }
+
+  button {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
